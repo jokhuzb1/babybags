@@ -1,0 +1,41 @@
+.text {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 5rem;
+}
+
+.text span {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0 0.5rem;
+  font-size: 3rem;
+  animation: zoomup 4s ease infinite;
+  display: inline-block;
+  animation-delay: calc(200ms * var(--i));
+  color: #ef0cb6;
+}
+
+@keyframes zoomup {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2) translateX(-50px);
+    filter: blur(1px);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text, .text span{
+    max-width: 100vw;
+    font-size: 1rem;
+    padding-right: 0.2;
+  }
+}

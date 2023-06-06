@@ -1,0 +1,12 @@
+.list {
+display: flex;
+flex-direction: column;    
+}
+
+.li-item{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-bottom: 1px dotted #ffff;
+    border-right: 1px dotted #ffff ;
+}
